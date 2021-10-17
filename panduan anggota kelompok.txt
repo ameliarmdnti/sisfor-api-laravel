@@ -1,0 +1,8 @@
+untuk menjalankan app, lakukan langkah berikut:
+
+1. ketikan perintah "composer install" di cmd pada folder app laravel
+2. buat database baru dan sesuaikan nama databasenya dengan yang ada di file .env
+3. kemudian ketik perintah "php artisan migrate" di cmd pada folder app laravel
+4. lakukan seeding dengan mengetikkan "php artisan db:seed --class=BookSeeder" di cmd pada folder app laravel
+
+5.  untuk mengetes api silahkan import collection "sistem informasi.postman_collection.json" ke dalam postman
