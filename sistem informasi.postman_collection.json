@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "250d038e-cb9b-41fa-8671-7bee5598a8e0",
+		"name": "sistem informasi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "all books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/books/15",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new books",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Jalanin Aja Dulu",
+							"type": "text"
+						},
+						{
+							"key": "author_name",
+							"value": "Amelia",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "2.000",
+							"type": "text"
+						},
+						{
+							"key": "isbn",
+							"value": "89787-3131-67645-123213",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Story of Life",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/books",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[PUT] books",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Jalanin Aja Bentar",
+							"type": "text"
+						},
+						{
+							"key": "author_name",
+							"value": "Amelia",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "2.000",
+							"type": "text"
+						},
+						{
+							"key": "isbn",
+							"value": "89787-3131-67645-123213",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Story of Life",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/books/17",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books/16",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"16"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000/api"
+		}
+	]
+}
