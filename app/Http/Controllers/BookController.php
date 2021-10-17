@@ -13,7 +13,11 @@ class BookController extends Controller
     {
         $response =  DB::table('books')->get();
 
-        return response()->json($response, 200);
+        return response()->json([
+            'status' => 200,
+            'message' => 'OK',
+            'data' => $response
+        ], 200);
     }
 
     public function store(Request $request)
@@ -37,7 +41,7 @@ class BookController extends Controller
 
         $id = DB::table('books')->insertGetId($data);
         $dataId = ['id' => $id];
-        
+
         return response()->json([
             'status' => 200,
             'message' => 'Book was store in database!',
